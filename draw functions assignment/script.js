@@ -25,6 +25,6 @@ function drawStar(x, y, color){
         line(x - 50, y + 50 , x + 50 , y + 100 );
         line(x - 50 , y + 50 , x + 50 , y + 50);
 }  
-drawStar(100, 100, "blue");
+    drawStar(100, 100, "blue");
 
 
