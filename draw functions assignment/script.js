@@ -5,44 +5,26 @@ cnv.width = 1500;
 cnv.height = 600;
 
 //Draw Targets
-
 function drawTarget(x, y, n, color) {
     stroke(color);
-    for (let numRings = 1; numRings <= n; numRings++ ){
-    circle(x + 50, y + 150, n * 10, "stroke");
-    circle(x + 300, y + 400 , n * 3, "stroke");
-    circle(x + 275, y + 350, n * 6, "stroke");
+    for (let ringNo = 1; ringNo <= n; ringNo++ ){
+        circle(x + 100, y + 150, ringNo * 10, "stroke");
     }
 }
-drawTarget(100, 100, 10, "green");
-drawTarget(300, 200, 3, "blue");
-drawTarget(275, 300, 6, "red");
-
-
+    drawTarget(150, 100, 10, "green");
+    drawTarget(250, 300, 6, "red");
+    drawTarget(300, 50, 3, "blue");
+    
 //Draw Platforms
-
-function drawStar(x, y, w, color){
-    for(let numWidth = 1; numWidth <=w; numWidth++){
-        stroke(color);
-    }
-    line(x - 40, y + 90, x + 5, y + 20);
-    line(x + 40, y + 90, x + 5, y + 20);
-    line(x + 50, y + 50 , x - 40 , y + 90 );
-    line(x - 50, y + 50 , x + 40 , y + 90 );
-    line(x - 50 , y + 50 , x + 50 , y + 50);
-}
-drawStar(700, 150, 3, "blue");
-
-//function drawStar2(x, y, color){
-   // stroke(color);
-   // lineWidth(2);
-   // line(x - 60, y + 150, x + 8, y + 40);
-   // line(x + 60, y + 150, x + 8, y + 40);
-   // line(x + 80, y + 80 , x - 60 , y + 150 );
-   // line(x - 80, y + 80 , x + 60 , y + 150 );
-   // line(x - 80 , y + 80 , x + 80 , y + 80);
-//}
-//drawStar2(900, 100, "green");
-
+function drawStar(x, y, color){
+    stroke(color);
+    lineWidth(3);
+        line(x - 50, y + 100, x, y + 5);
+        line(x + 50, y + 100, x, y + 5);
+        line(x + 50, y + 50 , x - 50, y + 100 );
+        line(x - 50, y + 50 , x + 50 , y + 100 );
+        line(x - 50 , y + 50 , x + 50 , y + 50);
+}  
+drawStar(100, 100, "blue");
 
 
